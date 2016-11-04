@@ -1,0 +1,21 @@
+name: MyChatColor
+main: mychatcolor.Main
+author: maru
+version: "1.0.0"
+api: ["1.0.0"]
+
+commands:
+ 채팅색:
+  usage: "/채팅색 <플레이어> <색코드>"
+  description: "채팅색을 설정합니다."
+  permission: mychatcolor.commands.chatcolor
+
+permissions:
+ mychatcolor.*:
+  default: OP
+  children:
+   mychatcolor.commands.*:
+    default: OP
+    children:
+     mychatcolor.commands.chatcolor:
+      default: OP
